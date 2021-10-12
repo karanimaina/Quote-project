@@ -6,6 +6,9 @@ import { Quote }from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   quotes:Quote[] = [
    new Quote(1, 'Khalifatul Masih III',"Love For All, Hatred For None.","cornelsen"),
    new Quote(2, 'Amy Poehler',"Every moment is a fresh beginning.","Cengage"),
@@ -19,9 +22,9 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index: number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+  completeGoal(isComplete: any, index: number){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+    
+  }}
