@@ -7,12 +7,12 @@ import { Quote }from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    {id:1, author:'Khalifatul Masih III',description:"Love For All, Hatred For None.",publisher:"cornelsen"},
-    {id:2, author:'Amy Poehler',description:"Every moment is a fresh beginning.",publisher:"Cengage"},
-    {id:3, author:'T.S Eliot',description:"Die with memories, not dreams. ",publisher:"bonnier"},
-    {id:4, author:'Mark Twain',description:"Never regret anything that made you smile.",publisher:"shuster"},
-    {id:5, author:'Pablo Picasso',description:"Everything you can imagine is real. ",publisher:"Penguin"},
-    {id:6, author:' Leonardo da Vinci',description:"Simplicity is the ultimate sophistication",publisher:"Macmilla"},
+   new Quote(1, 'Khalifatul Masih III',"Love For All, Hatred For None.","cornelsen"),
+   new Quote(2, 'Amy Poehler',"Every moment is a fresh beginning.","Cengage"),
+   new Quote(3, 'T.S Eliot',"Die with memories, not dreams. ","bonnier"),
+   new Quote(4, 'Mark Twain',"Never regret anything that made you smile.","shuster"),
+   new Quote(5, 'Pablo Picasso',"Everything you can imagine is real. ","Penguin"),
+   new Quote(6, ' Leonardo da Vinci',"Simplicity is the ultimate sophistication","Macmilla"),
 
   ]
   constructor() { }
