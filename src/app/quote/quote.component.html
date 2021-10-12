@@ -1,5 +1,10 @@
 <div>
     <h1>Inspirational quotes</h1>
-   <ul *ngFor="let quote of quotes">{{quote.id}}  {{quote.description}} {{quote.author}}</ul> 
-   <p *ngIf='quotes.length > 5'>Your quotes are too many</p>
-  </div>
+    <ul>
+        <li *ngFor="let quote of quotes">
+            {{quote.id}} :{{quote.description}}: {{quote.author}}
+            <app-quote-detail [quote]='quote'></app-quote-detail>
+        </li>
+    </ul>
+    <p *ngIf='quotes.length > 5'>Your quotes are too many</p>
+</div>
