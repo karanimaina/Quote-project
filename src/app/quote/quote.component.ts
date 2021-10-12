@@ -15,6 +15,10 @@ export class QuoteComponent implements OnInit {
    new Quote(6, ' Leonardo da Vinci',"Simplicity is the ultimate sophistication","Macmilla"),
 
   ]
+
+  toggleDetails(index: number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
