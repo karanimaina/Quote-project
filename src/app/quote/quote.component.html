@@ -7,7 +7,7 @@
              {{quote.id}}: {{quote.description}} :{{quote.author}} due on {{quote.completeDate|date|uppercase}}
             </li>
             <button (click)='toggleDetails(i)'>Show more</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete) = 'completeGoal($event,i)'></app-quote-detail>
+            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
         </div>
     </div>
     <p *ngIf='quotes.length > 5'>You have too many quotes</p>
