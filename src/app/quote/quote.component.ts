@@ -18,6 +18,12 @@ export class QuoteComponent implements OnInit {
    new Quote(6, ' Leonardo da Vinci',"Simplicity is the ultimate sophistication","Macmilla", new Date(2013,3,14)),
 
   ]
+  addNewQuote(quote: any){
+    let goalLength = this.quotes.length;
+    quote.id = goalLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
 
   toggleDetails(index: number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
