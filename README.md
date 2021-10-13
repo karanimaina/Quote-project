@@ -1,6 +1,16 @@
-# QuoteProject
+# Quote-App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+
+## Description
+This is a web application that helps a user insert quotes , view and delete quote , the userr can also set a date when that quote was lastly seen
+
+## Installation / Setup instruction
+<ul>
+  <li> Open Terminal {Ctrl+Alt+T}<li>
+  <li>git clone https://github.com/karanimaina/Quote-project.git </li>
+   <li>cd Quotes-App<li>
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Development server
 
