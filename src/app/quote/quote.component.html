@@ -4,13 +4,23 @@
      <div class="row">
         <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
-            <li appStrikethrough>
-             {{quote.id}}: {{quote.description}} :{{quote.author}} due on {{quote.completeDate|date|uppercase}}
-            </li>
-            <button (click)='toggleDetails(i)'class="btn btn-primary">Show more</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+           <div>
+              <h6 id ={{i}} appStrikethrough> {{quote.id}}: {{quote.description}} :{{quote.author}} due on {{quote.completeDate|date|uppercase}} </h6> 
+              <button (click)='toggleDetails(i)'class="btn btn-primary">Show more</button> 
+           </div> 
+            
+           <div *ngIf='quote.showDescription'></div>
+            <app-quote-detail  [quote]='quote'(isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
         </div>
     </div>
     <p *ngIf='quotes.length > 5'>You have too many quotes</p>
 </div>
+ 
+
+   
+
 
