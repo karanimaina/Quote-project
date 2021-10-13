@@ -10,7 +10,25 @@ export class QuoteDetailComponent implements OnInit {
   quote!: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
+  numberOfLikes : number = 0;
+  numberOfDislikes: number = 0;
+ 
 
+  likeButtonClick() {
+    this.numberOfLikes++;
+    if(this.numberOfLikes>5){
+      alert("Excellent quote")
+    }
+    // this.numberOfLikes.showDescription!= this.numberOfDislikes
+  }
+  dislikeButtonClick(){
+    this.numberOfDislikes--;
+    if(this.numberOfDislikes<-5){
+      alert("oops! bad quote")
+    } 
+   
+  }
+  ;
   quoteSeen(seen:boolean){
     this.isComplete.emit(seen);
   };

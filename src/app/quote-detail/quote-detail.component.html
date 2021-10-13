@@ -5,3 +5,9 @@
 <button (click)= 'quoteSeen(true)'>Seen</button>
 <p> lastly seen {{quote.completeDate|dateCount}} days</p>
 <button (click)= 'quoteDelete(true)'class="btn btn-outline-danger">Delete quote</button>
+<div class="col-md-6">
+    <i (click)='likeButtonClick()'> <button class="vote btn-success">Vote-Up</button></i>
+         {{numberOfLikes}} &nbsp;&nbsp;
+    <i (click)='dislikeButtonClick()'> <button class="vote1 btn-danger">Vote-Down</button> </i>
+         {{numberOfDislikes}} <br><br>
+</div>
