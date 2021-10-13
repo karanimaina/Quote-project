@@ -1,12 +1,13 @@
-<div>
+<div class="container">
     <h1>Inspirational quotes</h1>
      <hr>
-     <div>
+     <div class="row">
+        <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
             <li appStrikethrough>
              {{quote.id}}: {{quote.description}} :{{quote.author}} due on {{quote.completeDate|date|uppercase}}
             </li>
-            <button (click)='toggleDetails(i)'>Show more</button>
+            <button (click)='toggleDetails(i)'class="btn btn-primary">Show more</button>
             <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'(isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
         </div>
     </div>
