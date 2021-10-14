@@ -16,13 +16,12 @@ export class QuoteDetailComponent implements OnInit {
 
   likeButtonClick() {
     this.numberOfLikes++;
-    if(this.numberOfLikes>5){
+    if(this.numberOfLikes>20){
       alert("Excellent quote")
     }
-    // this.numberOfLikes.showDescription!= this.numberOfDislikes
   }
   dislikeButtonClick(){
-    this.numberOfDislikes--;
+    this.numberOfDislikes++;
     if(this.numberOfDislikes<-5){
       alert("oops! bad quote")
     } 
