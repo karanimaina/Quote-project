@@ -22,7 +22,7 @@ export class QuoteDetailComponent implements OnInit {
   }
   dislikeButtonClick(){
     this.numberOfDislikes++;
-    if(this.numberOfDislikes<-5){
+    if(this.numberOfDislikes>30){
       alert("oops! bad quote")
     } 
    
